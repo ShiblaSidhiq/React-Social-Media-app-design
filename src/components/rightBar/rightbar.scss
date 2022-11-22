@@ -1,0 +1,108 @@
+@import "../../style.scss";
+
+
+    
+
+.rightbar{
+    @include themify($themes){
+    flex:4;
+    position: sticky;
+    top:59px;
+    height:calc(100vh - 70px);
+    overflow: scroll;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: themed("bg");
+
+    @include mobile{
+        display: none;
+    }
+
+    @include tablet{
+        display: none;
+    }
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .container{
+        padding:9px;
+
+    .item{
+        
+        padding: 20px;
+        span{
+            color:grey;
+                }
+        .user{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0px;
+                    hr{
+                        color:#cccccc;
+                    }
+
+
+            .userinfo{
+                display: flex;
+                align-items: center;
+                gap:20px;
+                position:relative;
+                img{
+                    width:40px;
+                    height:40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    }
+                .online{
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color:limegreen ;
+                    position:absolute;
+                    top:0;
+                    left:30px;
+                }
+                p{
+                    color:themed("textColorsoft");
+                 }
+                span{
+                    font-weight: 500px;
+                    color:themed("textColorsoft");  
+
+                    }
+
+                    }
+                    .buttons{
+                        display: flex;
+                        align-items: center;
+
+                        gap:10px;
+                        
+                        button{
+                            border:none;
+                            padding:5px;
+                            color:white;
+                            cursor:pointer;
+                            gap:5px;
+
+                            &:first-child{
+                                background-color: #5271ff;
+                            
+                            }
+                            &:last-child{
+                                background-color: #f0544f;
+                            }
+                            
+
+                        }
+                        
+
+                    }
+                }
+            }
+        }
+    }
+}
